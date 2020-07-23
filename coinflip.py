@@ -1,4 +1,7 @@
 import random
+correct_guesses = 0
+total_guesses = 0
+
 print 'Welcome to the Coin Flip Game!'
 def make_guess():
     guess = raw_input('Guess either Heads or Tails\n')
@@ -8,10 +11,10 @@ guess1 = make_guess()
 raw_input('Press enter to flip the coin')
 
 def print_result(str):
-    'You got %s result!' % str
+    print 'You got %s!' % str
     
 def quit_or_again():
-    answer = raw_input('Type 'Quit' to exit. Press space to play again.')
+    answer = raw_input('Type "Quit" to exit. Press space to play again.\n')
     if answer == 'quit' or answer == 'Quit':
         quit()
     else:
