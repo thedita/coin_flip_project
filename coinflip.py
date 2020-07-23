@@ -4,6 +4,8 @@ total_guesses = 0
 
 print 'Welcome to the Coin Flip Game!'
 def make_guess():
+    print "Correct Guesses:", correct_guesses
+    print "Total Guesses:", total_guesses
     guess = raw_input('Guess either Heads or Tails\n')
     return guess
 guess1 = make_guess()
@@ -28,7 +30,11 @@ def flip_coin(guess):
     else:
         result = "Tails"
     print_result(result)
+    global total_guesses
+    total_guesses += 1
     if result == guess:
+        global correct_guesses
+        correct_guesses += 1
         print 'You guessed correctly!'
     elif result != guess:
         print 'You guessed incorrectly!'
